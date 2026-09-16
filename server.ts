@@ -1,13 +1,13 @@
 import "dotenv/config";
 import express from "express";
 import path from "path";
-import { db } from "./server/db.js";
-import { analyzeWildlifeImage, analyzeWildlifeAudio, generateConservationRecommendations } from "./server/ai.js";
-import { getCredentialByEmail, saveCredential, hashPassword } from "./server/credentials.js";
-import { calculatePopulationEstimates, getSpeciesPopulationEstimate, getSitePopulationEstimate, getPopulationTrends } from "./server/population-estimator.js";
-import { calculateHabitatAssessments, getSiteHabitatAssessment, getAllHabitatAssessments } from "./server/habitat-intelligence.js";
-import { generateConservationRecommendations as runConservationEngine, getConservationRecommendations, updateRecommendationStatus } from "./server/conservation-engine.js";
-import { calculateEcosystemHealthReports, getEcosystemHealthReports, getSiteEcosystemHealthReport } from "./server/ecosystem-health.js";
+import { db } from "./server/db";
+import { analyzeWildlifeImage, analyzeWildlifeAudio, generateConservationRecommendations } from "./server/ai";
+import { getCredentialByEmail, saveCredential, hashPassword } from "./server/credentials";
+import { calculatePopulationEstimates, getSpeciesPopulationEstimate, getSitePopulationEstimate, getPopulationTrends } from "./server/population-estimator";
+import { calculateHabitatAssessments, getSiteHabitatAssessment, getAllHabitatAssessments } from "./server/habitat-intelligence";
+import { generateConservationRecommendations as runConservationEngine, getConservationRecommendations, updateRecommendationStatus } from "./server/conservation-engine";
+import { calculateEcosystemHealthReports, getEcosystemHealthReports, getSiteEcosystemHealthReport } from "./server/ecosystem-health";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
